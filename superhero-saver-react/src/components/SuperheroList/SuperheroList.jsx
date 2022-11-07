@@ -2,7 +2,7 @@ import styles from "./SuperheroList.module.scss";
 
 function SuperheroList({ data }) {
 	return (
-		<div>
+		<div className={styles.superhero_list}>
 			<h2>Saved Heroes</h2>
 			<ul>
 				{data.map((entry, index) => (
