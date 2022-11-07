@@ -1,5 +1,15 @@
 .searchbar {
 	background-color: white;
 	padding: 10px;
-	border-radius: 50% 0;
+	border-radius: 20px;
+
+	&_input {
+		height: 20px;
+		border-radius: 10px;
+	}
+
+	&_submit {
+		height: 20px;
+		border-radius: 10px;
+	}
 }

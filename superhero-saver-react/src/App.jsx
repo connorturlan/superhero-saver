@@ -13,6 +13,9 @@ function App() {
 
 	const handleSearch = (query) => {
 		console.log("search", query);
+
+		// at present, we only search by ID.
+		FindHeroByID();
 	};
 
 	return (
