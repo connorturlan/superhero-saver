@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./App.css";
+import styles from "./App.module.scss";
 import SuperheroCard from "./components/SuperheroCard/SuperheroCard";
 import SearchBar from "./components/SearchBar/SearchBar";
 import SuperheroList from "./components/SuperheroList/SuperheroList";
@@ -40,10 +40,14 @@ function App() {
 	};
 
 	return (
-		<div className="App">
-			<SearchBar placeholder="Superman" onSubmit={handleSearch} />
-			<SuperheroCard data={currentHero} onSave={handleHeroSave} />
-			<SuperheroList data={savedHeroes} />
+		<div className={styles.app}>
+			<div className={styles.sidebar}>
+				<SuperheroList data={savedHeroes} />
+			</div>
+			<div className={styles.main}>
+				<SearchBar placeholder="Superman" onSubmit={handleSearch} />
+				<SuperheroCard data={currentHero} onSave={handleHeroSave} />
+			</div>
 		</div>
 	);
 }

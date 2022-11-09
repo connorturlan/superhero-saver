@@ -1,0 +1,22 @@
+.app {
+	display: grid;
+	grid-template-columns: 20vh 60vh;
+	gap: 40px;
+
+	width: 80vh;
+	height: 80vh;
+
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.sidebar {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
