@@ -11,12 +11,11 @@ function SearchBar({ placeholder, onSubmit }) {
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
-		console.log(searchTerm);
 		onSubmit(searchTerm);
 	};
 
 	return (
-		<div className={styles.searchbar}>
+		<form className={styles.searchbar} onSubmit={handleSubmit}>
 			<input
 				type="text"
 				className={styles.searchbar_input}
@@ -29,7 +28,7 @@ function SearchBar({ placeholder, onSubmit }) {
 				value="Search"
 				onClick={handleSubmit}
 			/>
-		</div>
+		</form>
 	);
 }
 

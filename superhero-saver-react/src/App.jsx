@@ -4,6 +4,7 @@ import SuperheroCard from "./components/SuperheroCard/SuperheroCard";
 import SearchBar from "./components/SearchBar/SearchBar";
 import SuperheroList from "./components/SuperheroList/SuperheroList";
 import { FindHeroByID } from "./utils/APISearchFunctions";
+import { DigestSearchTerm } from "./utils/SearchTermFunctions";
 
 function App() {
 	const [count, setCount] = useState(0);
@@ -20,8 +21,10 @@ function App() {
 	const handleSearch = async (query) => {
 		console.log("search", query);
 
+		const searchQuery = DigestSearchTerm(query);
+
 		// at present, we only search by ID.
-		const heroId = parseInt(query);
+		const heroId = parseInt(searchQuery.id);
 		const data = await FindHeroByID(heroId);
 
 		// update the hero card.
